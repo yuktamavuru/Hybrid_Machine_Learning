@@ -1,0 +1,175 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        .style8 {
+	font-size: 24px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-style: italic;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF BOTNET ATTACK TYPE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="923" align="center">
+                                  <tr>
+                                    <td height="57" colspan="4" bgcolor="#0000FF"><div align="center" class="style8">Enter All Datasets Details Here !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Fid</div></td>
+                                    <td><input type="text" name="Fid"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourcedFrom</div></td>
+                                    <td><input type="text" name="SourcedFrom"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter FileTimeUtc</div></td>
+                                    <td><input type="text" name="FileTimeUtc"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIp</div></td>
+                                    <td><input type="text" name="SourceIp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter SourcePort</div>
+                                    </div></td>
+                                    <td><input type="text" name="SourcePort"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIpAsnNr</div></td>
+                                    <td><input type="text" name="SourceIpAsnNr"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter TargetIp</div>
+                                    </div></td>
+                                    <td><input type="text" name="TargetIp"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter TargetPort</div></td>
+                                    <td><input type="text" name="TargetPort"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7"><span class="style4">Enter</span> Payload </span></strong></div></td>
+                                    <td><input type="text" name="Payload"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIpCountryCode</div></td>
+                                    <td><input type="text" name="SourceIpCountryCode"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7"><span class="style4">Enter</span> SourceIpRegion</span></strong></div></td>
+                                    <td><input type="text" name="SourceIpRegion"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIpCity</div></td>
+                                    <td><input type="text" name="SourceIpCity"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7"><span class="style4">Enter</span> SourceIpLatitude</span></strong></div></td>
+                                    <td><input type="text" name="SourceIpLatitude"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIpLongitude</div></td>
+                                    <td><input type="text" name="SourceIpLongitude"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7"><span class="style4">Enter</span> SourceIpMetroCode</span></strong></div></td>
+                                    <td><input type="text" name="SourceIpMetroCode"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">Enter SourceIpAreaCode</div></td>
+                                    <td><input type="text" name="SourceIpAreaCode"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style7"><span class="style4">Enter</span> HttpRequest</span></strong></div></td>
+                                    <td><input type="text" name="HttpRequest"></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000">&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="271" height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td width="205">&nbsp;</td>
+                                    <td width="252">&nbsp;</td>
+                                    <td width="201"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>&nbsp;</p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="711" height="66" border="0" align="center" >
+                                    <tr><td width="484" bgcolor="#FF0000"><div align="center"><span class="style6">Prediction Of Botnet Attack Type </span> <span class="style4">:: ---&gt; </span></div></td>
+
+
+
+                                      <td width="217" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

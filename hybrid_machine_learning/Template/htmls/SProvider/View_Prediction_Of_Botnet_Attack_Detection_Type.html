@@ -1,0 +1,119 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Botnet Attack Type Prediction Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Fid</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourcedFrom</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">FileTimeUtc</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIp</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourcePort</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpAsnNr</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">TargetIp</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">TargetPort</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Payload</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpCountryCode</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpRegion</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpCity</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpLatitude</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpLongitude</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpMetroCode</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">SourceIpAreaCode</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">HttpRequest</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Fid}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourcedFrom}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.FileTimeUtc}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIp}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourcePort}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpAsnNr}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.TargetIp}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.TargetPort}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Payload}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpCountryCode}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpRegion}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpCity}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpLatitude}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpLongitude}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpMetroCode}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.SourceIpAreaCode}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.HttpRequest}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,40 @@
+Hybrid Machine Learning Model for Efficient Botnet Attack Detection in IoT Environment
+
+
+Botnet attack detection, stacking, cyber-attacks, stacked ensemble, deep learning, IoT.
+
+
+IEEE Transaction on Machine Learning,Volume:12,Issue Date:12.March.2024
+
+Hybrid_Machine_Learning
+
+
+hybrid_machine_learning
+
+
+detect_botnet_attack
+
+
+members
+-------
+
+Fid	
+SourcedFrom	
+FileTimeUtc	
+SourceIp	
+SourcePort	
+SourceIpAsnNr	
+TargetIp	
+TargetPort	
+Payload	
+SourceIpCountryCode	
+SourceIpRegion	
+SourceIpCity	
+SourceIpLatitude	
+SourceIpLongitude	
+SourceIpMetroCode	
+SourceIpAreaCode	
+HttpRequest
+Prediction
+
+Botnet_Attack_Detection
